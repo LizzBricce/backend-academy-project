@@ -1,6 +1,6 @@
 package doo.gym.academyproject.B_useCases.dto;
 
-import doo.gym.academyproject.A_entity.PhysicalCharacteristics;
+import doo.gym.academyproject.A_entity.PhysicalProfile;
 import doo.gym.academyproject.A_entity.TrainingDetails;
 
 public class UserDTO {
@@ -9,14 +9,14 @@ public class UserDTO {
     private String email;
     private String password;
     private int count;
-    private PhysicalCharacteristics characteristic;
+    private PhysicalProfile characteristic;
 
     private TrainingDetails training;
 
     private UserDTO(){
         this.id = ++count;
     }
-    public UserDTO(String name, String email, String password, PhysicalCharacteristics characteristic, TrainingDetails training) {
+    public UserDTO(String name, String email, String password, PhysicalProfile characteristic, TrainingDetails training) {
         this();
         this.name = name;
         this.email = email;
@@ -65,11 +65,11 @@ public class UserDTO {
         this.name = name;
     }
 
-    public PhysicalCharacteristics getCharacteristic() {
+    public PhysicalProfile getCharacteristic() {
         return characteristic;
     }
 
-    public void setCharacteristic(PhysicalCharacteristics characteristic) {
+    public void setCharacteristic(PhysicalProfile characteristic) {
         this.characteristic = characteristic;
     }
 

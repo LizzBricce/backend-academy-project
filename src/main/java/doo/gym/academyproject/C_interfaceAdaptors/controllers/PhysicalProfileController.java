@@ -7,23 +7,23 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/characteristics")
+@RequestMapping("/physicalProfile") //atualizar caminho no front tb
 @CrossOrigin(allowedHeaders = "*")
-public class CharacteristicsController {
+public class PhysicalProfileController {
 
     private final UserService userService;
 
     @Autowired
-    public CharacteristicsController(UserService userService) {
+    public PhysicalProfileController(UserService userService) {
         this.userService = userService;
     }
 
     @PostMapping("/add")
-    public ResponseEntity<?> addCharacteristics(@RequestBody User user) { //melhorar
+    public ResponseEntity<?> addPhysicalProfile(@RequestBody User user) { //melhorar
         try {
             User existingUser = userService.getUserById(user.getId());
             if (existingUser != null) {
-                existingUser.setCharacteristics(user.getCharacteristics());
+                existingUser.setPhysicalProfile(user.getPhysicalProfile());
                 userService.update(existingUser.getId(), existingUser);
                 return ResponseEntity.ok(new Object() {
                     public String successMessage = "Caracteristicas adicionadas com sucesso.";

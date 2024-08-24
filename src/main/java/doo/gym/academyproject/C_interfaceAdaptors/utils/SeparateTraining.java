@@ -3,41 +3,37 @@ package doo.gym.academyproject.C_interfaceAdaptors.utils;
 import doo.gym.academyproject.A_entity.TrainingDetails;
 
 public class SeparateTraining {
+
     public static TrainingDetails splitTraining(String clearText) {
         if (clearText == null || clearText.isEmpty()) {
-            throw new IllegalArgumentException("resposta da API vazia");
+            throw new IllegalArgumentException("resposta da API nula");
         }
 
         String[] lines = clearText.split("\\n");
-
-        if (lines.length < 3) {
-            throw new IllegalArgumentException("reposta da API invalida");
-        }
-
         StringBuilder trainingA = new StringBuilder();
         StringBuilder trainingB = new StringBuilder();
         StringBuilder trainingC = new StringBuilder();
 
-        String currentSection = "";
+        StringBuilder currentTraining = null;
 
         for (String line : lines) {
-            if (line.startsWith("**Treino")) {
-                currentSection = line;
-            } else {
-                if (currentSection.equals("**Treino A")) {
-                    trainingA.append(line).append("\n");
-                } else if (currentSection.equals("**Treino B")) {
-                    trainingB.append(line).append("\n");
-                } else if (currentSection.equals("**Treino C")) {
-                    trainingC.append(line).append("\n");
-                }
+            if (line.startsWith("**Treino A")) {
+                currentTraining = trainingA;
+            } else if (line.startsWith("**Treino B")) {
+                currentTraining = trainingB;
+            } else if (line.startsWith("**Treino C")) {
+                currentTraining = trainingC;
+            }
+
+            if (currentTraining != null && !line.startsWith("**Treino")) {
+                currentTraining.append(line).append("\n");
             }
         }
 
-        String trainingAStr = trainingA.toString().trim();
-        String trainingBStr = trainingB.toString().trim();
-        String trainingCStr = trainingC.toString().trim();
-
-        return new TrainingDetails(trainingAStr, trainingBStr, trainingCStr);
+        return new TrainingDetails(
+                trainingA.toString().trim(),
+                trainingB.toString().trim(),
+                trainingC.toString().trim()
+        );
     }
 }

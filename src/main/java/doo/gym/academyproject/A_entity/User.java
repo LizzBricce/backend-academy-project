@@ -1,14 +1,14 @@
 package doo.gym.academyproject.A_entity;
 
 import doo.gym.academyproject.A_entity.Enuns.Gender;
-import doo.gym.academyproject.A_entity.Enuns.PhysicalGoal;
+import doo.gym.academyproject.A_entity.Enuns.FitnessGoal;
 
 public class User{
     private double id;
     private String name;
     private String email;
     private String password;
-    private PhysicalCharacteristics characteristics;
+    private PhysicalProfile physicalProfile;
     private TrainingDetails training;
 
     public User(String name, String email, String password){
@@ -16,11 +16,11 @@ public class User{
         this.email = email;
         this.password = password;
     }
-    public User(String name, String email, String password, PhysicalCharacteristics characteristics, TrainingDetails training) {
+    public User(String name, String email, String password, PhysicalProfile physicalProfile, TrainingDetails training) {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.characteristics = characteristics;
+        this.physicalProfile = physicalProfile;
         this.training = training;
     }
 
@@ -60,12 +60,12 @@ public class User{
         this.name = name;
     }
 
-    public PhysicalCharacteristics getCharacteristics() {
-        return characteristics;
+    public PhysicalProfile getPhysicalProfile() {
+        return physicalProfile;
     }
 
-    public void setCharacteristics(PhysicalCharacteristics characteristics) {
-        this.characteristics = characteristics;
+    public void setPhysicalProfile(PhysicalProfile physicalProfile) {
+        this.physicalProfile = physicalProfile;
     }
 
     public TrainingDetails getTraining() {
@@ -76,6 +76,6 @@ public class User{
         this.training = training;
     }
 
-    public void setCharacteristics(double weight, double height, Gender gender, PhysicalGoal physicalGoal, int age) {
+    public void setCharacteristics(double weight, double height, Gender gender, FitnessGoal fitnessGoal, int age) {
     }
 }

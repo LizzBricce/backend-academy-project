@@ -71,7 +71,7 @@ public class UserDAOImpl implements UserDAO {
                 user.setName(updatedUser.getName());
                 user.setEmail(updatedUser.getEmail());
                 user.setPassword(updatedUser.getPassword());
-                user.setCharacteristics(updatedUser.getCharacteristics());
+                user.setPhysicalProfile(updatedUser.getPhysicalProfile());
                 user.setTraining(updatedUser.getTraining());
                 break;
             }
