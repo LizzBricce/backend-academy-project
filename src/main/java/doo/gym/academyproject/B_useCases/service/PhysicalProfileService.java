@@ -15,10 +15,9 @@ public class PhysicalProfileService {
     public PhysicalProfileService(PhysicalProfileDAO physicalProfileDAO) {
         this.physicalProfileDAO = physicalProfileDAO;
     }
-
-    public void addCharacteristics(User user, PhysicalProfile characteristics) {
+    public void addPhysicalProfile(User user, PhysicalProfile physicalProfile) {
         if (user != null) {
-            physicalProfileDAO.addPhysicalProfile(user, characteristics);
+            physicalProfileDAO.addPhysicalProfile(user, physicalProfile);
         }
     }
 

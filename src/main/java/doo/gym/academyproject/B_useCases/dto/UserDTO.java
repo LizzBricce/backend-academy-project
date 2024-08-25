@@ -1,23 +1,21 @@
 package doo.gym.academyproject.B_useCases.dto;
 
 import doo.gym.academyproject.A_entity.PhysicalProfile;
-import doo.gym.academyproject.A_entity.TrainingDetails;
+import doo.gym.academyproject.A_entity.Training;
 
 public class UserDTO {
     private int id;
     private String name;
     private String email;
     private String password;
-    private int count;
     private PhysicalProfile characteristic;
+    private Training training;
 
-    private TrainingDetails training;
-
-    private UserDTO(){
-        this.id = ++count;
+    public UserDTO() {
     }
-    public UserDTO(String name, String email, String password, PhysicalProfile characteristic, TrainingDetails training) {
-        this();
+
+    public UserDTO(int id, String name, String email, String password, PhysicalProfile characteristic, Training training) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
@@ -25,30 +23,14 @@ public class UserDTO {
         this.training = training;
     }
 
-    public UserDTO(String name, String email, String password) {
-        this();
+    public UserDTO(int id, String name, String email, String password) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setpPassword(String password) {
-        this.password = password;
-    }
-
+    // Getters e Setters
     public int getId() {
         return id;
     }
@@ -65,6 +47,22 @@ public class UserDTO {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public PhysicalProfile getCharacteristic() {
         return characteristic;
     }
@@ -73,12 +71,11 @@ public class UserDTO {
         this.characteristic = characteristic;
     }
 
-    public TrainingDetails getTraining() {
+    public Training getTraining() {
         return training;
     }
 
-    public void setTraining(TrainingDetails training) {
+    public void setTraining(Training training) {
         this.training = training;
     }
-
 }

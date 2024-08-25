@@ -11,11 +11,9 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     private final UserDAO userDAO;
-    private final PhysicalProfileService physicalProfileService;
 
-    public UserServiceImpl(UserDAO userDAO, PhysicalProfileService physicalProfileService){
+    public UserServiceImpl(UserDAO userDAO){
         this.userDAO = userDAO;
-        this.physicalProfileService = physicalProfileService;
     }
 
     @Override
@@ -23,7 +21,7 @@ public class UserServiceImpl implements UserService {
         if(isUserValid(user)){
             userDAO.insertUser(user);
         }else{
-            throw new Exception("error adding user");
+            throw new Exception("erro ao adicionar usuario");
         }
     }
 
@@ -38,7 +36,7 @@ public class UserServiceImpl implements UserService {
             userDAO.updateUser(id, user);
             return true;
         }else{
-            throw new Exception("error when updating user");
+            throw new Exception("erro ao atualizar usuario");
         }
     }
 
@@ -57,15 +55,6 @@ public class UserServiceImpl implements UserService {
         return userDAO.getUserById(id);
     }
 
-    public void addCharacteristicsToUser(double userId, PhysicalProfile characteristics) throws Exception {
-        User user = getUserById(userId);
-        if (user != null) {
-            physicalProfileService.addCharacteristics(user, characteristics);
-            update(userId, user);
-        } else {
-            throw new Exception("nao :c");
-        }
-    }
     private boolean isUserValid(User user){
         if(userDAO.getUserByEmail(user.getEmail()) != null){
             return false;

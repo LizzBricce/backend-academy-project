@@ -1,10 +1,10 @@
 package doo.gym.academyproject.C_interfaceAdaptors.utils;
 
-import doo.gym.academyproject.A_entity.TrainingDetails;
+import doo.gym.academyproject.A_entity.Training;
 
 public class SeparateTraining {
 
-    public static TrainingDetails splitTraining(String clearText) {
+    public static Training splitTraining(String clearText) {
         if (clearText == null || clearText.isEmpty()) {
             throw new IllegalArgumentException("resposta da API nula");
         }
@@ -30,7 +30,7 @@ public class SeparateTraining {
             }
         }
 
-        return new TrainingDetails(
+        return new Training(
                 trainingA.toString().trim(),
                 trainingB.toString().trim(),
                 trainingC.toString().trim()

@@ -1,7 +1,7 @@
 package doo.gym.academyproject.B_useCases.service;
 
 import doo.gym.academyproject.A_entity.PhysicalProfile;
-import doo.gym.academyproject.A_entity.TrainingDetails;
+import doo.gym.academyproject.A_entity.Training;
 import doo.gym.academyproject.A_entity.User;
 import doo.gym.academyproject.B_useCases.dto.PhysicalProfileDTO;
 import doo.gym.academyproject.B_useCases.dto.PromptBuilder;
@@ -67,7 +67,7 @@ public class APIService {
 
             String responseBody = responseEntity.getBody();
             String clearText = jsonProcessingService.processAPIResponse(responseBody);
-            TrainingDetails separatedTraining = trainingSeparationService.separateTraining(clearText);
+            Training separatedTraining = trainingSeparationService.separateTraining(clearText);
 
             loggedInUser.setTraining(separatedTraining);
             userService.update(loggedInUser.getId(), loggedInUser);

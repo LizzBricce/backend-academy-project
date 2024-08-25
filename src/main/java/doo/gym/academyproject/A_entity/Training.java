@@ -1,45 +1,34 @@
 package doo.gym.academyproject.A_entity;
 
 public class Training {
+    private String trainingA;
+    private String trainingB;
+    private String trainingC;
+    private String fullTraining;
 
-    private String trainingName;
-    private String description;
-//    private LocalDate dayOfWeek;
-//    private boolean status;
-
-    public Training(String trainingName, String description) {
-        this.trainingName = trainingName;
-        this.description = description;
+    public Training(String trainingA, String trainingB, String trainingC) {
+        this.trainingA = trainingA;
+        this.trainingB = trainingB;
+        this.trainingC = trainingC;
     }
 
-    public String getTrainingName() {
-        return trainingName;
+    public String getTrainingA() {
+        return trainingA;
     }
 
-    public void setTrainingName(String trainingName) {
-        this.trainingName = trainingName;
+    public String getTrainingB() {
+        return trainingB;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTrainingC() {
+        return trainingC;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public String getFullTraining() {
+        return fullTraining;
     }
-//    public LocalDate getDayOfWeek() {
-//        return dayOfWeek;
-//    }
-//
-//    public void setDayOfWeek(LocalDate dayOfWeek) {
-//        this.dayOfWeek = dayOfWeek;
-//    }
-//
-//    public boolean isStatus() {
-//        return status;
-//    }
-//
-//    public void setStatus(boolean status) {
-//        this.status = status;
-//    }
+
+    public void setFullTraining(String fullTraining) {
+        this.fullTraining = fullTraining;
+    }
 }

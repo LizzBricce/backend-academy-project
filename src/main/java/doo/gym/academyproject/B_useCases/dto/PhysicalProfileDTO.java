@@ -1,16 +1,15 @@
 package doo.gym.academyproject.B_useCases.dto;
 
-
 import doo.gym.academyproject.A_entity.Enuns.Gender;
 import doo.gym.academyproject.A_entity.Enuns.FitnessGoal;
 
 public class PhysicalProfileDTO {
 
-    private final Gender gender;
-    private final FitnessGoal fitnessGoal;
-    private final double weight;
-    private final double height;
-    private final int age;
+    private Gender gender;
+    private FitnessGoal fitnessGoal;
+    private double weight;
+    private double height;
+    private int age;
 
     public PhysicalProfileDTO(Gender gender, FitnessGoal fitnessGoal, int age, double height, double weight) {
         this.gender = gender;
@@ -40,11 +39,5 @@ public class PhysicalProfileDTO {
         return fitnessGoal;
     }
 
-    @Override
-    public  String toString() {
-        return "create a workout A, B, C for a person of the sex"
-                + gender +
-                "with the goal of" +
-                " " + fitnessGoal;
-    }
+
 }

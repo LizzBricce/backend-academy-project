@@ -4,28 +4,24 @@ import doo.gym.academyproject.A_entity.Enuns.Gender;
 import doo.gym.academyproject.A_entity.Enuns.FitnessGoal;
 
 public class User{
-    private double id;
+    private  long id;
     private String name;
     private String email;
     private String password;
     private PhysicalProfile physicalProfile;
-    private TrainingDetails training;
+    private Training training;
 
     public User(String name, String email, String password){
         this.name = name;
         this.email = email;
         this.password = password;
     }
-    public User(String name, String email, String password, PhysicalProfile physicalProfile, TrainingDetails training) {
+    public User(String name, String email, String password, PhysicalProfile physicalProfile, Training training) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.physicalProfile = physicalProfile;
         this.training = training;
-    }
-
-    public User() {
-
     }
 
     public String getEmail() {
@@ -44,11 +40,11 @@ public class User{
         this.password = password;
     }
 
-    public double getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -68,14 +64,14 @@ public class User{
         this.physicalProfile = physicalProfile;
     }
 
-    public TrainingDetails getTraining() {
+    public Training getTraining() {
         return training;
     }
 
-    public void setTraining(TrainingDetails training) {
+    public void setTraining(Training training) {
         this.training = training;
     }
 
-    public void setCharacteristics(double weight, double height, Gender gender, FitnessGoal fitnessGoal, int age) {
-    }
+//    public void setCharacteristics(double weight, double height, Gender gender, FitnessGoal fitnessGoal, int age) {
+//    }
 }
