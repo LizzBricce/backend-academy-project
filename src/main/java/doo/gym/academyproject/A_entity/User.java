@@ -11,6 +11,9 @@ public class User{
     private PhysicalProfile physicalProfile;
     private Training training;
 
+    public User() {
+    }
+
     public User(String name, String email, String password){
         this.name = name;
         this.email = email;
