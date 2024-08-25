@@ -4,9 +4,7 @@ package doo.gym.academyproject.C_interfaceAdaptors.controllers;
 import doo.gym.academyproject.A_entity.User;
 import doo.gym.academyproject.B_useCases.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -8,6 +8,22 @@ public class Contents {
         this.parts = new Parts(text);
     }
 
+    public Parts getParts() {
+        return parts;
+    }
+
+    public void setParts(Parts parts) {
+        this.parts = parts;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     class Parts {
         private String text;
 
@@ -15,5 +31,12 @@ public class Contents {
             this.text = text;
         }
 
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
     }
 }

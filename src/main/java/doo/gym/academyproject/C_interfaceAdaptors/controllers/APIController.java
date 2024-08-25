@@ -4,7 +4,6 @@ import doo.gym.academyproject.A_entity.User;
 import doo.gym.academyproject.B_useCases.service.APIService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

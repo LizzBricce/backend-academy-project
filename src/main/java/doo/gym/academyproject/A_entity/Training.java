@@ -1,4 +1,3 @@
-
 package doo.gym.academyproject.A_entity;
 
 public class Training {

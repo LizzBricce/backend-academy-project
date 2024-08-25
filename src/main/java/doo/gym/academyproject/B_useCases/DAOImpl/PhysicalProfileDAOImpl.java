@@ -1,6 +1,5 @@
 package doo.gym.academyproject.B_useCases.DAOImpl;
 
-
 import doo.gym.academyproject.A_entity.Enuns.FitnessGoal;
 import doo.gym.academyproject.A_entity.PhysicalProfile;
 import doo.gym.academyproject.A_entity.User;
