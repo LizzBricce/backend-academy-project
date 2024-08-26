@@ -9,7 +9,7 @@ public class PromptBuilder {
                 "genero: " + dto.getGender() + ", " +
                 "objetivo: " + dto.getFitnessGoal() + ", " +
                 "idade: " + dto.getAge() + ", " +
-                "altura: " + dto.getHeight() + ", " +
-                "peso: " + dto.getWeight();
+                "altura: " + dto.getBodyHeight() + ", " +
+                "peso: " + dto.getBodyWeight();
     }
 }

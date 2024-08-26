@@ -1,7 +1,7 @@
-package doo.gym.academyproject.A_entity;
+package doo.gym.academyproject.A_Entities;
 
-import doo.gym.academyproject.A_entity.Enuns.Gender;
-import doo.gym.academyproject.A_entity.Enuns.FitnessGoal;
+import doo.gym.academyproject.A_Entities.Enuns.FitnessGoal;
+import doo.gym.academyproject.A_Entities.Enuns.Gender;
 
 public class PhysicalProfile {
 
@@ -74,6 +74,5 @@ public class PhysicalProfile {
             return new PhysicalProfile(bodyWeight, bodyHeight, gender, age, fitnessGoal);
         }
     }
-
 
 }

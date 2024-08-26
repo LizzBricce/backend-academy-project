@@ -1,6 +1,6 @@
 package doo.gym.academyproject.C_interfaceAdaptors.controllers;
 
-import doo.gym.academyproject.A_entity.Training;
+import doo.gym.academyproject.A_Entities.Training;
 import doo.gym.academyproject.B_useCases.service.TrainingSeparationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

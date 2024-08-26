@@ -1,15 +1,15 @@
 package doo.gym.academyproject.B_useCases.service;
 
-import doo.gym.academyproject.A_entity.User;
+import doo.gym.academyproject.A_Entities.User;
 import doo.gym.academyproject.B_useCases.DAOInterfaces.UserDAO;
 import org.springframework.stereotype.Service;
 
 @Service
-public class LoginImpl implements Login {
+public class LoginServiceImpl implements LoginService {
 
     private final UserDAO userDAO;
 
-    public LoginImpl(UserDAO userDAO) {
+    public LoginServiceImpl(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
 

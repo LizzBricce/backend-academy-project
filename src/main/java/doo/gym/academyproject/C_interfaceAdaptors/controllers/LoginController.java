@@ -1,8 +1,8 @@
 package doo.gym.academyproject.C_interfaceAdaptors.controllers;
 
-import doo.gym.academyproject.A_entity.User;
+import doo.gym.academyproject.A_Entities.User;
 import doo.gym.academyproject.B_useCases.dto.LoginDTO;
-import doo.gym.academyproject.B_useCases.service.Login;
+import doo.gym.academyproject.B_useCases.service.LoginService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(allowedHeaders = "*")
 public class LoginController {
 
-    private final Login loginUseCase;
+    private final LoginService loginService;
 
-    public LoginController(Login loginUseCase) {
-        this.loginUseCase = loginUseCase;
+    public LoginController(LoginService loginUseCase) {
+        this.loginService = loginUseCase;
     }
 
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody LoginDTO loginDTO) {
-        User user = loginUseCase.authenticateUser(loginDTO.getEmail(), loginDTO.getPassword());
+        User user = loginService.authenticateUser(loginDTO.getEmail(), loginDTO.getPassword());
         if (user != null) {
             return ResponseEntity.ok(user);
         } else {

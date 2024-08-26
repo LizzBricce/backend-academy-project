@@ -1,6 +1,6 @@
 package doo.gym.academyproject.C_interfaceAdaptors.utils;
 
-import doo.gym.academyproject.A_entity.Training;
+import doo.gym.academyproject.A_Entities.Training;
 
 public class SeparateTraining {
 

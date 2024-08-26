@@ -1,4 +1,4 @@
-package doo.gym.academyproject.A_entity;
+package doo.gym.academyproject.A_Entities;
 
 public class Training {
     private String trainingA;

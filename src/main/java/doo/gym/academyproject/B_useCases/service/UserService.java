@@ -1,7 +1,7 @@
 package doo.gym.academyproject.B_useCases.service;
 
 
-import doo.gym.academyproject.A_entity.User;
+import doo.gym.academyproject.A_Entities.User;
 import java.util.List;
 
 //interface responsavel por fazer a adição de usuarios no sistema

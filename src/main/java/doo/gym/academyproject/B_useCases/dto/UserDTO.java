@@ -1,41 +1,25 @@
 package doo.gym.academyproject.B_useCases.dto;
 
-import doo.gym.academyproject.A_entity.PhysicalProfile;
-import doo.gym.academyproject.A_entity.Training;
-
 public class UserDTO {
-    private int id;
+    private Long id;
     private String name;
     private String email;
     private String password;
-    private PhysicalProfile characteristic;
-    private Training training;
+    private PhysicalProfileDTO physicalProfile;
 
-    public UserDTO() {
-    }
-
-    public UserDTO(int id, String name, String email, String password, PhysicalProfile characteristic, Training training) {
+    public UserDTO(Long id, String name, String email, String password, PhysicalProfileDTO physicalProfile) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.characteristic = characteristic;
-        this.training = training;
+        this.physicalProfile = physicalProfile;
     }
 
-    public UserDTO(int id, String name, String email, String password) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
-
-    // Getters e Setters
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -63,19 +47,11 @@ public class UserDTO {
         this.password = password;
     }
 
-    public PhysicalProfile getCharacteristic() {
-        return characteristic;
+    public PhysicalProfileDTO getPhysicalProfile() {
+        return physicalProfile;
     }
 
-    public void setCharacteristic(PhysicalProfile characteristic) {
-        this.characteristic = characteristic;
-    }
-
-    public Training getTraining() {
-        return training;
-    }
-
-    public void setTraining(Training training) {
-        this.training = training;
+    public void setPhysicalProfile(PhysicalProfileDTO physicalProfile) {
+        this.physicalProfile = physicalProfile;
     }
 }

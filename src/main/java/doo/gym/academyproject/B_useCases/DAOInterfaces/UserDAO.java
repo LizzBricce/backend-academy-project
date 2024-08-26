@@ -1,6 +1,6 @@
 package doo.gym.academyproject.B_useCases.DAOInterfaces;
 
-import doo.gym.academyproject.A_entity.User;
+import doo.gym.academyproject.A_Entities.User;
 import java.util.List;
 
 public interface UserDAO {

@@ -1,6 +1,6 @@
-package doo.gym.academyproject.C_interfaceAdaptors.controllers;
+package doo.gym.academyproject.B_useCases.service;
 
-import doo.gym.academyproject.A_entity.Contents;
+import doo.gym.academyproject.A_Entities.Contents;
 
 public class APIRequest{
     private Contents contents;

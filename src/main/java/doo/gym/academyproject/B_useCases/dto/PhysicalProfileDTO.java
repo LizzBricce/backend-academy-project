@@ -1,43 +1,49 @@
 package doo.gym.academyproject.B_useCases.dto;
 
-import doo.gym.academyproject.A_entity.Enuns.Gender;
-import doo.gym.academyproject.A_entity.Enuns.FitnessGoal;
-
 public class PhysicalProfileDTO {
-
-    private Gender gender;
-    private FitnessGoal fitnessGoal;
-    private double weight;
-    private double height;
+    private String gender;
+    private String fitnessGoal;
     private int age;
+    private double bodyHeight;
+    private double bodyWeight;
 
-    public PhysicalProfileDTO(Gender gender, FitnessGoal fitnessGoal, int age, double height, double weight) {
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getFitnessGoal() {
+        return fitnessGoal;
+    }
+
+    public void setFitnessGoal(String fitnessGoal) {
         this.fitnessGoal = fitnessGoal;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public double getHeight() {
-        return height;
     }
 
     public int getAge() {
         return age;
     }
 
-    public Gender getGender() {
-        return gender;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public FitnessGoal getFitnessGoal() {
-        return fitnessGoal;
+    public double getBodyHeight() {
+        return bodyHeight;
     }
 
+    public void setBodyHeight(double bodyHeight) {
+        this.bodyHeight = bodyHeight;
+    }
 
+    public double getBodyWeight() {
+        return bodyWeight;
+    }
+
+    public void setBodyWeight(double bodyWeight) {
+        this.bodyWeight = bodyWeight;
+    }
 }
