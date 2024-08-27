@@ -1,4 +1,4 @@
-package doo.gym.academyproject.B_useCases.service;
+package doo.gym.academyproject.B_useCases.service.util.mapper;
 
 import doo.gym.academyproject.A_Entities.User;
 import doo.gym.academyproject.B_useCases.dto.UserDTO;

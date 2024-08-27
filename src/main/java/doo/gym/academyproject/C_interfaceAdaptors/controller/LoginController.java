@@ -1,8 +1,8 @@
-package doo.gym.academyproject.C_interfaceAdaptors.controllers;
+package doo.gym.academyproject.C_interfaceAdaptors.controller;
 
 import doo.gym.academyproject.A_Entities.User;
 import doo.gym.academyproject.B_useCases.dto.LoginDTO;
-import doo.gym.academyproject.B_useCases.service.LoginService;
+import doo.gym.academyproject.B_useCases.service.interfaces.LoginService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

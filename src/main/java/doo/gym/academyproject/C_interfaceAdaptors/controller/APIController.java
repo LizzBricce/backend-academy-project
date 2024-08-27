@@ -1,9 +1,9 @@
-package doo.gym.academyproject.C_interfaceAdaptors.controllers;
+package doo.gym.academyproject.C_interfaceAdaptors.controller;
 
 import doo.gym.academyproject.A_Entities.User;
 import doo.gym.academyproject.B_useCases.dto.UserDTO;
 import doo.gym.academyproject.B_useCases.service.APIServiceImpl;
-import doo.gym.academyproject.B_useCases.service.UserMapper;
+import doo.gym.academyproject.B_useCases.service.util.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

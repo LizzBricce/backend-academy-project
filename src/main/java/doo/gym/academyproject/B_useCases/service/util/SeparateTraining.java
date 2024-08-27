@@ -1,4 +1,4 @@
-package doo.gym.academyproject.C_interfaceAdaptors.utils;
+package doo.gym.academyproject.B_useCases.service.util;
 
 import doo.gym.academyproject.A_Entities.Training;
 

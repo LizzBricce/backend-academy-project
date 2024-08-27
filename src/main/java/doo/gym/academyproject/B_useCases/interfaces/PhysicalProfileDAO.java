@@ -1,4 +1,4 @@
-package doo.gym.academyproject.B_useCases.DAOInterfaces;
+package doo.gym.academyproject.B_useCases.interfaces;
 
 import doo.gym.academyproject.A_Entities.PhysicalProfile;
 import doo.gym.academyproject.A_Entities.User;

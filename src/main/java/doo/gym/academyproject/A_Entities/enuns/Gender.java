@@ -1,4 +1,4 @@
-package doo.gym.academyproject.A_Entities.Enuns;
+package doo.gym.academyproject.A_Entities.enuns;
 
 public enum Gender {
     FEMININO,

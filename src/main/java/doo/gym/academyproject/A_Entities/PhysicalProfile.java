@@ -1,7 +1,7 @@
 package doo.gym.academyproject.A_Entities;
 
-import doo.gym.academyproject.A_Entities.Enuns.FitnessGoal;
-import doo.gym.academyproject.A_Entities.Enuns.Gender;
+import doo.gym.academyproject.A_Entities.enuns.FitnessGoal;
+import doo.gym.academyproject.A_Entities.enuns.Gender;
 
 public class PhysicalProfile {
 

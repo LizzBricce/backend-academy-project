@@ -1,16 +1,16 @@
-package doo.gym.academyproject.B_useCases.dto;
+package doo.gym.academyproject.B_useCases.dao;
 
-import doo.gym.academyproject.B_useCases.service.APIRequest;
+import doo.gym.academyproject.B_useCases.service.request.APIRequest;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class APIClientImpl implements APIClient {
+public class APIClientDAO implements doo.gym.academyproject.B_useCases.interfaces.APIClientDAO {
 
     private final RestTemplate restTemplate;
 
-    public APIClientImpl() {
+    public APIClientDAO() {
         this.restTemplate = new RestTemplate();
     }
 

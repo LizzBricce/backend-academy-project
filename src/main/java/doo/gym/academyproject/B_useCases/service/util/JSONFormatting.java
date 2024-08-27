@@ -1,4 +1,4 @@
-package doo.gym.academyproject.C_interfaceAdaptors.infra;
+package doo.gym.academyproject.B_useCases.service.util;
 
 import org.json.JSONArray;
 import org.json.JSONException;

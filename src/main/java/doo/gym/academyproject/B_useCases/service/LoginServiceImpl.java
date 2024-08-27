@@ -1,7 +1,8 @@
 package doo.gym.academyproject.B_useCases.service;
 
 import doo.gym.academyproject.A_Entities.User;
-import doo.gym.academyproject.B_useCases.DAOInterfaces.UserDAO;
+import doo.gym.academyproject.B_useCases.interfaces.UserDAO;
+import doo.gym.academyproject.B_useCases.service.interfaces.LoginService;
 import org.springframework.stereotype.Service;
 
 @Service

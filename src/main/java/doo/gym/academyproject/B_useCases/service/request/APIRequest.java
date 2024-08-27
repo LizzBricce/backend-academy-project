@@ -1,4 +1,4 @@
-package doo.gym.academyproject.B_useCases.service;
+package doo.gym.academyproject.B_useCases.service.request;
 
 import doo.gym.academyproject.A_Entities.Contents;
 

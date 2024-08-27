@@ -1,7 +1,8 @@
 package doo.gym.academyproject.B_useCases.service;
 
 import doo.gym.academyproject.A_Entities.User;
-import doo.gym.academyproject.B_useCases.DAOInterfaces.UserDAO;
+import doo.gym.academyproject.B_useCases.interfaces.UserDAO;
+import doo.gym.academyproject.B_useCases.service.interfaces.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -61,10 +62,7 @@ public class UserServiceImpl implements UserService {
         if(user.getPassword().length() < 6){
             return false;
         }
-        if(user.getName().length() < 3){
-            return false;
-        }
-        return true;
+        return user.getName().length() >= 3;
     }
 
 }

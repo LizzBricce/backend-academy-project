@@ -3,9 +3,14 @@ package doo.gym.academyproject.B_useCases.service;
 import doo.gym.academyproject.A_Entities.Training;
 import doo.gym.academyproject.A_Entities.User;
 import doo.gym.academyproject.B_useCases.dto.PhysicalProfileDTO;
-import doo.gym.academyproject.B_useCases.dto.PromptBuilder;
-import doo.gym.academyproject.B_useCases.dto.APIClient;
+import doo.gym.academyproject.B_useCases.service.interfaces.APIService;
+import doo.gym.academyproject.B_useCases.service.interfaces.UserService;
+import doo.gym.academyproject.B_useCases.service.util.PromptBuilder;
+import doo.gym.academyproject.B_useCases.interfaces.APIClientDAO;
 import doo.gym.academyproject.B_useCases.dto.UserDTO;
+import doo.gym.academyproject.B_useCases.service.util.mapper.PhysicalProfileMapper;
+import doo.gym.academyproject.B_useCases.service.util.mapper.UserMapper;
+import doo.gym.academyproject.B_useCases.service.request.APIRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -19,7 +24,7 @@ public class APIServiceImpl implements APIService {
     @Value("${api.link}")
     private String apiLink;
 
-    private final APIClient apiClient;
+    private final APIClientDAO apiClientDAO;
     private final JSONProcessingService jsonProcessingService;
     private final TrainingSeparationService trainingSeparationService;
     private final PromptBuilder promptBuilder;
@@ -27,10 +32,13 @@ public class APIServiceImpl implements APIService {
     private final UserMapper userMapper;
     private final PhysicalProfileMapper physicalProfileMapper;
 
-    public APIServiceImpl(APIClient apiClient, JSONProcessingService jsonProcessingService,
+    private static String lastGeneratedTraining = null;
+
+
+    public APIServiceImpl(APIClientDAO apiClientDAO, JSONProcessingService jsonProcessingService,
                           TrainingSeparationService trainingSeparationService, PromptBuilder promptBuilder,
                           UserService userService, UserMapper userMapper, PhysicalProfileMapper physicalProfileMapper) {
-        this.apiClient = apiClient;
+        this.apiClientDAO = apiClientDAO;
         this.jsonProcessingService = jsonProcessingService;
         this.trainingSeparationService = trainingSeparationService;
         this.promptBuilder = promptBuilder;
@@ -45,7 +53,7 @@ public class APIServiceImpl implements APIService {
             PhysicalProfileDTO physicalProfileDTO = loggedInUserDTO.getPhysicalProfile();
             String prompt = promptBuilder.createPrompt(physicalProfileDTO);
             APIRequest request = new APIRequest(prompt);
-            ResponseEntity<String> responseEntity = apiClient.sendRequest(apiLink + apiKey, request);
+            ResponseEntity<String> responseEntity = apiClientDAO.sendRequest(apiLink + apiKey, request);
 
             String responseBody = responseEntity.getBody();
             String clearText = jsonProcessingService.processAPIResponse(responseBody);
@@ -58,5 +66,9 @@ public class APIServiceImpl implements APIService {
             return clearText;
         }
         return null;
+    }
+
+    public static String getLastGeneratedTraining() {
+        return lastGeneratedTraining;
     }
 }
