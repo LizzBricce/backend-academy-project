@@ -17,15 +17,15 @@ public class SeparateTraining {
         StringBuilder currentTraining = null;
 
         for (String line : lines) {
-            if (line.startsWith("**Treino A")) {
+            if (line.startsWith("Treino A")) {
                 currentTraining = trainingA;
-            } else if (line.startsWith("**Treino B")) {
+            } else if (line.startsWith("Treino B")) {
                 currentTraining = trainingB;
-            } else if (line.startsWith("**Treino C")) {
+            } else if (line.startsWith("Treino C")) {
                 currentTraining = trainingC;
             }
 
-            if (currentTraining != null && !line.startsWith("**Treino")) {
+            if (currentTraining != null && !line.startsWith("Treino")) {
                 currentTraining.append(line).append("\n");
             }
         }

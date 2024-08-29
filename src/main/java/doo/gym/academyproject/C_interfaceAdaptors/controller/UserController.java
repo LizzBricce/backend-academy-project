@@ -35,6 +35,20 @@ public class UserController {
             throw new ProjectException(e.getMessage());
         }
     }
+    @PostMapping("/delete/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable Integer id) throws Exception  {
+        try {
+            userService.remove(id);
+                return ResponseEntity
+                        .status(HttpStatus.OK)
+                        .body("Usuário removido com sucesso.");
+
+        }catch (ProjectException e){
+            return ResponseEntity
+                    .status(HttpStatus.NOT_FOUND)
+                    .body(e.getMessage());
+        }
+    }
 
     @GetMapping("/list")
     public List<User>  showUserList() {

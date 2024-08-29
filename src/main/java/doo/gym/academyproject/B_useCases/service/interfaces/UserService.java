@@ -9,7 +9,7 @@ import java.util.List;
 public interface UserService{
 
     void add(User user) throws Exception;
-    boolean remove(double id);
+    boolean remove(double id) throws Exception;
     boolean update(double id, User user) throws Exception;
     List<User> list();
     User getUserByEmail(String email);
