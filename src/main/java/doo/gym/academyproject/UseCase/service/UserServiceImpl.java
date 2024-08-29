@@ -26,8 +26,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean remove(double id) {
-        return userDAO.delete(id);
+    public boolean remove(double id) throws Exception  {
+        if(isUserValid(userDAO.getUserById(id))){
+            return userDAO.delete(id);
+        }else{
+            throw new Exception("erro ao remover usuario");
+        }
     }
 
     @Override
