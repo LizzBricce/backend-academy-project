@@ -2,7 +2,7 @@ package doo.gym.academyproject.UseCase.service;
 
 import doo.gym.academyproject.Entity.PhysicalProfile;
 import doo.gym.academyproject.Entity.User;
-import doo.gym.academyproject.UseCase.interfaces.PhysicalProfileDAO;
+import doo.gym.academyproject.UseCase.interfacesDAO.PhysicalProfileDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

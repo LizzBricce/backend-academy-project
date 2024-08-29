@@ -1,16 +1,17 @@
-package doo.gym.academyproject.UseCase.dao;
+package doo.gym.academyproject.InterfaceAdaptors.dao;
 
+import doo.gym.academyproject.UseCase.interfacesDAO.APIClientDAO;
 import doo.gym.academyproject.UseCase.service.request.APIRequest;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class APIClientDAO implements doo.gym.academyproject.UseCase.interfaces.APIClientDAO {
+public class APIClientDAOImpl implements APIClientDAO {
 
     private final RestTemplate restTemplate;
 
-    public APIClientDAO() {
+    public APIClientDAOImpl() {
         this.restTemplate = new RestTemplate();
     }
 

@@ -1,4 +1,4 @@
-package doo.gym.academyproject.UseCase.interfaces;
+package doo.gym.academyproject.UseCase.interfacesDAO;
 
 import doo.gym.academyproject.Entity.User;
 import java.util.List;

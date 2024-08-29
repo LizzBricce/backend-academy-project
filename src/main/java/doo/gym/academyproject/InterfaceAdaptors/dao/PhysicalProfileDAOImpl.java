@@ -1,9 +1,9 @@
-package doo.gym.academyproject.UseCase.dao;
+package doo.gym.academyproject.InterfaceAdaptors.dao;
 
 import doo.gym.academyproject.Entity.enuns.FitnessGoal;
 import doo.gym.academyproject.Entity.PhysicalProfile;
 import doo.gym.academyproject.Entity.User;
-import doo.gym.academyproject.UseCase.interfaces.PhysicalProfileDAO;
+import doo.gym.academyproject.UseCase.interfacesDAO.PhysicalProfileDAO;
 import org.springframework.stereotype.Repository;
 
 @Repository

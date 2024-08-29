@@ -1,7 +1,7 @@
-package doo.gym.academyproject.UseCase.dao;
+package doo.gym.academyproject.InterfaceAdaptors.dao;
 
 import doo.gym.academyproject.Entity.User;
-import doo.gym.academyproject.UseCase.interfaces.UserDAO;
+import doo.gym.academyproject.UseCase.interfacesDAO.UserDAO;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;

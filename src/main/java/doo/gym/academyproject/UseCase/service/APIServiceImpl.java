@@ -6,7 +6,7 @@ import doo.gym.academyproject.UseCase.dto.PhysicalProfileDTO;
 import doo.gym.academyproject.UseCase.service.interfaces.APIService;
 import doo.gym.academyproject.UseCase.service.interfaces.UserService;
 import doo.gym.academyproject.UseCase.service.util.PromptBuilder;
-import doo.gym.academyproject.UseCase.interfaces.APIClientDAO;
+import doo.gym.academyproject.UseCase.interfacesDAO.APIClientDAO;
 import doo.gym.academyproject.UseCase.dto.UserDTO;
 import doo.gym.academyproject.UseCase.service.util.mapper.PhysicalProfileMapper;
 import doo.gym.academyproject.UseCase.service.util.mapper.UserMapper;
