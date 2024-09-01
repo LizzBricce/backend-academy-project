@@ -6,7 +6,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserMapper {
-
+    /**
+     * Converte a Entidade User e o DTO UserDTO
+     *
+     * o objetivo disso é adaptar os dados entre as camadas Entity e a camada de adaptadores de interface
+     * isso separa a responsabilidade de ambas
+     */
     private final PhysicalProfileMapper physicalProfileMapper;
 
     public UserMapper(PhysicalProfileMapper physicalProfileMapper) {

@@ -3,7 +3,11 @@ package doo.gym.academyproject.UseCase.service.util;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+/**
+ * Classe que formata a resposta JSON recebida pela API
+ *
+ * limpa os dados e informaçoes que nao sao importantes para o objetivo do projeto
+ */
 public class JSONFormatting {
 
     private String responseText;

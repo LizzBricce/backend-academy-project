@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Classe responsavel por gerenciar os metodos referentes a usuario
+ */
 @Service
 public class UserServiceImpl implements UserService {
 

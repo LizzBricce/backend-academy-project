@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Controlador web responsavel pelos endpoints referentes a usuario
+ */
 @RestController
 @RequestMapping("/user")
 @CrossOrigin(allowedHeaders = "*")
@@ -23,6 +26,10 @@ public class UserController {
         this.userService = userService;
     }
 
+    /**
+     * /user/add
+     * endpoint que recebe um Usuario e adiciona ele no sistema
+     */
     @PostMapping("/add")
     public ResponseEntity<?> addUser(@RequestBody User user) throws Exception {
         try {
@@ -35,6 +42,10 @@ public class UserController {
             throw new ProjectException(e.getMessage());
         }
     }
+    /**
+     * /user/delete/{id}
+     * endpoint que recebe um id de usuario e remove do sistema
+     */
     @PostMapping("/delete/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable Integer id) throws Exception  {
         try {
@@ -49,12 +60,18 @@ public class UserController {
                     .body(e.getMessage());
         }
     }
-
+    /**
+     * /user/list
+     * endpoint que mostra todos os usuarios cadastrados
+     */
     @GetMapping("/list")
     public List<User>  showUserList() {
         return userService.list();
     }
-
+    /**
+     * /user/profile/id
+     * endpoint que leva ao perfil do usuario
+     */
     @GetMapping("/profile/{id}")
     public ResponseEntity<?> userProfile(@PathVariable Integer id) {
         try {

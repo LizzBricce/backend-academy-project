@@ -1,5 +1,8 @@
 package doo.gym.academyproject.Entity;
 
+/**
+ * Classe que serve de modelo para separar o treino em tres partes para facilitar a visualização
+ */
 public class Training {
     private String trainingA;
     private String trainingB;

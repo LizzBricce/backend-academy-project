@@ -5,6 +5,9 @@ import doo.gym.academyproject.UseCase.interfacesDAO.UserDAO;
 import doo.gym.academyproject.UseCase.service.interfaces.LoginService;
 import org.springframework.stereotype.Service;
 
+/**
+ * Implementa a logica de login do usuario
+ */
 @Service
 public class LoginServiceImpl implements LoginService {
 

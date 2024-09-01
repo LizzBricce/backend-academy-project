@@ -6,6 +6,12 @@ import doo.gym.academyproject.Entity.PhysicalProfile;
 import doo.gym.academyproject.UseCase.dto.PhysicalProfileDTO;
 import org.springframework.stereotype.Component;
 
+/**
+ * Converte a Entidade PhysicalProfile e o DTO PhysicalProfileDTO
+ *
+ * o objetivo disso é adaptar os dados entre as camadas Entity e a camada de adaptadores de interface
+ * isso separa a responsabilidade de ambas
+ */
 @Component
 public class PhysicalProfileMapper {
 
@@ -13,8 +19,6 @@ public class PhysicalProfileMapper {
         if (dto == null) {
             return null;
         }
-
-        System.out.println("Mapping DTO to PhysicalProfile: " + dto);
 
         return new PhysicalProfile.PhysicalProfileBuilder()
                 .bodyWeight(dto.getBodyWeight())
@@ -30,7 +34,6 @@ public class PhysicalProfileMapper {
             return null;
         }
 
-        System.out.println("Mapping PhysicalProfile to DTO: " + physicalProfile);
 
         PhysicalProfileDTO dto = new PhysicalProfileDTO();
         dto.setBodyWeight(physicalProfile.getBodyWeight());

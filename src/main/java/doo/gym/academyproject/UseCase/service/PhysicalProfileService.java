@@ -6,6 +6,10 @@ import doo.gym.academyproject.UseCase.interfacesDAO.PhysicalProfileDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Classe de serviço para gerenciar os metodos relacionados a usuario
+ *
+ */
 @Service
 public class PhysicalProfileService {
 

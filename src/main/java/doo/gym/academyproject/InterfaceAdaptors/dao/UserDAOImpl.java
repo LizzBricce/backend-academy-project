@@ -6,6 +6,11 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe que implementa os dados de gerenciamento de usuario definidos pela classe UserDAO
+ *
+ * armazena os usuarios em um ArrayList
+ */
 @Component
 public class UserDAOImpl implements UserDAO {
     private final List<User> users = new ArrayList<>();

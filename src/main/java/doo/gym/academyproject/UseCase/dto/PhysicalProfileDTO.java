@@ -1,5 +1,8 @@
 package doo.gym.academyproject.UseCase.dto;
 
+/**
+ * DTO de Physicalprofile com o objetivo de transferir dados entre as camadas
+ */
 public class PhysicalProfileDTO {
     private String gender;
     private String fitnessGoal;

@@ -4,8 +4,12 @@ package doo.gym.academyproject.UseCase.service.interfaces;
 import doo.gym.academyproject.Entity.User;
 import java.util.List;
 
-//interface responsavel por fazer a adição de usuarios no sistema
-//o uso da interface é pensando no principio de inversao de dependencias
+/**
+ * Define os metodos implementados na classe UserServiceImpl
+ *
+ * o uso de interfaces segue o principio da inversão de dependências,
+ * fazendo com que as outras classes dependam de abstrações e não da implementação
+ */
 public interface UserService{
 
     void add(User user) throws Exception;

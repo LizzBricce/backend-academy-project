@@ -2,6 +2,11 @@ package doo.gym.academyproject.UseCase.service.util;
 
 import doo.gym.academyproject.Entity.Training;
 
+/**
+ * SeparateTraining separa o texto que ja foi 'limpo' para facilitar a exibição em 3 partes, A, B, e C
+ *
+ *
+ */
 public class SeparateTraining {
 
     public static Training splitTraining(String clearText) {

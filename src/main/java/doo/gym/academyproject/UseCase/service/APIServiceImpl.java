@@ -15,6 +15,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 
+/**
+ * classe responsavel por juntar as informações existentes e fazer a requisição na API por meio do protocolo HTTP
+ * envia a solicitação, chama as classes de formatação e atualiza o perfil do usuario com o treino recebido
+ */
 @Service
 public class APIServiceImpl implements APIService {
 

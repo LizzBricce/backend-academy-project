@@ -1,5 +1,8 @@
 package doo.gym.academyproject.Entity;
 
+/**
+ * Classe que representa o usuario dentro do sistema
+ */
 public class User {
     private long id;
     private String name;
@@ -67,6 +70,9 @@ public class User {
         this.training = training;
     }
 
+    /**
+     * uso do padrao Builder com o objetivo de melhorar a instancia do Objeto
+     */
     public static class UserBuilder {
         private long id;
         private String name;

@@ -1,5 +1,7 @@
 package doo.gym.academyproject.UseCase.dto;
-
+/**
+ * DTO de User com o objetivo de transferir dados entre as camadas
+ */
 public class UserDTO {
     private Long id;
     private String name;

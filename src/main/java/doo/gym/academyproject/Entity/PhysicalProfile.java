@@ -3,6 +3,10 @@ package doo.gym.academyproject.Entity;
 import doo.gym.academyproject.Entity.enuns.FitnessGoal;
 import doo.gym.academyproject.Entity.enuns.Gender;
 
+/**
+ * Classe que representa o perfil fisico/caracteristicas
+ * é com base nessas informações que o treino é gerado de forma personalizada
+ */
 public class PhysicalProfile {
 
     private final double bodyWeight;
@@ -38,6 +42,9 @@ public class PhysicalProfile {
         return fitnessGoal;
     }
 
+    /**
+     * uso do padrao Builder com o objetivo de melhorar a instancia do Objeto
+     */
     public static class PhysicalProfileBuilder{
         private double bodyWeight;
         private double bodyHeight;

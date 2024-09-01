@@ -7,6 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Controlador responsavel pela classe de perfil fisico
+ */
 @RestController
 @RequestMapping("/physicalProfile")
 @CrossOrigin(allowedHeaders = "*")
@@ -19,6 +22,10 @@ public class PhysicalProfileController {
         this.userService = userService;
     }
 
+    /**
+     * endpoin /physicalProfile/add
+     * recebe um usuario como argumento e adiciona as caracteristicas recebidas no perfil dele
+     */
     @PostMapping("/add")
     public ResponseEntity<?> addPhysicalProfile(@RequestBody User user) {
         try {

@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Controlador web responsavel pelo endpoints referente a requisição da API
+ */
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
@@ -19,6 +22,10 @@ public class APIController {
     @Autowired
     private UserMapper userMapper;
 
+    /**
+     * /api/generate_training
+     * endpoint que gera o treino de acordo com o Usuario recebido
+     */
     @PostMapping("/generate_training")
     public ResponseEntity<?> generateTraining(@RequestBody User user) {
         try {
@@ -34,7 +41,7 @@ public class APIController {
             return ResponseEntity.status(500).body(new ResponseMessage("erro ao gerar o treino: " + e.getMessage(), null));
         }
     }
-
+    //encapsula a mensagem e o treino na resposta da api
     private static class ResponseMessage {
         public String message;
         public String training;

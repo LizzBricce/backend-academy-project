@@ -6,6 +6,11 @@ import doo.gym.academyproject.Entity.User;
 import doo.gym.academyproject.UseCase.interfacesDAO.PhysicalProfileDAO;
 import org.springframework.stereotype.Repository;
 
+/**
+ * Classe que implementa os metodos de gerenciamento de perfil fisico definidos pela PhysicalProfileDAO
+ *
+ *
+ */
 @Repository
 public class PhysicalProfileDAOImpl implements PhysicalProfileDAO {
 
